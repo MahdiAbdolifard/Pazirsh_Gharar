@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block c %}
+
+<style>
+body {
+    direction: rtl;
+}
+    body, td, th {
+        font-family: Calibre, sans-serif;
+        }
+        *:lang(fa) {
+            font-family: Btitr, sans-serif;
+        }
+        
+</style>
+    <h1>لیست دانش‌آموزان</h1>
+    <h6> تعداد : {{ count }}</h6>
+
+    <table style="border-collapse: collapse; width: 100%; background-color: #f2f2f2;">
+        <tr style="background-color: #ddd;">
+            <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+            <th style="border: 1px solid #ddd; padding: 8px;">Phone Number</th>
+        </tr>
+        {% for student in all_student %}
+        <tr style="border: 1px solid #ddd;">
+            <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">{{ student.phone }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
