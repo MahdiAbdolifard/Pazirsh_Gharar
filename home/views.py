@@ -19,9 +19,12 @@ def create(request):
         form = CreateForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            Paziresh.objects.create(fname=cd['fname'], lname=cd['lname'], school_name=cd['school_name'], phone=cd['phone'], grade=cd['grade'], created_bey=cd['created_by'])
+            Paziresh.objects.create(fname=cd['fname'], lname=cd['lname'], school_name=cd['school_name'], 
+                                    phone=cd['phone'], grade=cd['grade'], created_bey=cd['created_by'],
+                                    parent_phone=cd['parent_phone'], group_name=cd['group_name'])
             messages.success(request, 'دانش‌آموز با موفقیت ثبت شد', 'success')
             send(cd['phone'])
+            send(cd['parent_phone'])
             messages.success(request, 'پیام ارسال شد', 'primary')
             return redirect('allstudent')
             

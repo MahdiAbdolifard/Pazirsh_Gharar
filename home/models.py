@@ -7,5 +7,7 @@ class Paziresh(models.Model):
     school_name = models.CharField(max_length=500)
     grade = models.CharField(max_length=50)
     phone = models.CharField(max_length=20)
-    created = models.DateTimeField(auto_now=True)
+    parent_phone = models.CharField(max_length=20)
+    group_name = models.CharField(max_length=50)
     created_bey = models.CharField(max_length=50)
+    created = models.DateTimeField(auto_now=True)
