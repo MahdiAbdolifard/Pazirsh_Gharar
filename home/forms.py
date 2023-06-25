@@ -4,8 +4,8 @@ class CreateForm(forms.Form):
     fname = forms.CharField(label='نام')
     lname = forms.CharField(label='نام خانوادگی',required=True)
     school_name = forms.CharField(label='مدرسه',required=True)
-    phone = forms.CharField(label='شماره تلفن',required=True, max_length=11)
-    parent_phone = forms.CharField(label='شماره تلفن اولیا',required=True, max_length=11)
+    phone = forms.CharField(label='شماره تلفن',required=True, max_length=11, min_length=11)
+    parent_phone = forms.CharField(label='شماره تلفن اولیا',required=True, max_length=11, min_length=11)
     grade = forms.ChoiceField(label='پایه',choices=[("هفتم", "هفتم"),
                                          ("هشتم", "هشتم"),
                                          ("نهم", "نهم"),],
@@ -16,3 +16,4 @@ class CreateForm(forms.Form):
                                          required=True)
         
     created_by = forms.CharField(label='ثبت کننده',required=True)
+

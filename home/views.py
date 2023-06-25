@@ -14,6 +14,16 @@ def test(request):
     return render(request, 'hello.html', {'all_student':all, 'count':all_count})
 
 
+def group(request):
+    malek = Paziresh.objects.all().filter(group_name='مالک اشتر')
+    malek_count = Paziresh.objects.all().filter(group_name='مالک اشتر').count()
+
+    amar = Paziresh.objects.all().filter(group_name='عمار')
+    amar_count = Paziresh.objects.all().filter(group_name='عمار').count()
+
+    return render(request, 'group.html', {'malek':malek, 'malek_count':malek_count,
+                                          'amar':amar, 'amar_count':amar_count,})
+
 def create(request):
     if request.method == 'POST':
         form = CreateForm(request.POST)
