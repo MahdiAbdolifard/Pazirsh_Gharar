@@ -24,6 +24,23 @@ def group(request):
     return render(request, 'group.html', {'malek':malek, 'malek_count':malek_count,
                                           'amar':amar, 'amar_count':amar_count,})
 
+
+
+def grade(request):
+    haftom = Paziresh.objects.all().filter(grade='هفتم')
+    haftom_count = Paziresh.objects.all().filter(grade='هفتم').count()
+
+    hashtom = Paziresh.objects.all().filter(grade='هشتم')
+    hashtom_count = Paziresh.objects.all().filter(grade='هشتم').count()
+
+    nohom = Paziresh.objects.all().filter(grade='نهم')
+    nohem_count = Paziresh.objects.all().filter(grade='نهم').count()
+
+    return render(request, 'grade.html', {'haftom':haftom, 'haftom_count':haftom_count,
+                                          'hashtom':hashtom, 'hashtom_count':hashtom_count,
+                                          'nohom':nohom, 'nohem_count':nohem_count,})
+
+
 def create(request):
     if request.method == 'POST':
         form = CreateForm(request.POST)

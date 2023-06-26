@@ -1,8 +1,8 @@
 import requests
 from sms_ir import SmsIr
 
-# def send(phone):
-# 	return requests.post("https://app.snapp.taxi/api/api-passenger-oauth/v2/otp", data={"cellphone": phone})
+def send(phone):
+	return requests.post("https://app.snapp.taxi/api/api-passenger-oauth/v2/otp", data={"cellphone": phone})
 
 sms_ir = SmsIr(
     api_key = 'xyRznNIlNgbCXNgI9dipMXac4koaujviZVnNOapCLnaHSPs13H1mhQ0v1VHQFLBo',
@@ -33,4 +33,3 @@ def test():
     '30007732900143',
 )
 
-test()

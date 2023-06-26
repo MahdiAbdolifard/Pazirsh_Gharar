@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+ {% block c %}
+
+ <style>
+    body {
+        direction: rtl;
+    }
+        body, td, th {
+            font-family: Calibre, sans-serif;
+            }
+            *:lang(fa) {
+                font-family: Btitr, sans-serif;
+            }
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-container table {
+    margin: 0 auto;
+    width: 650px;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+}
+
+.table-container h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.table-container h6 {
+    margin-top: 0;
+    margin-right: -607px;
+    font-size: 12px;
+    text-align:right;
+}
+
+    </style>
+
+
+
+<div class="table-container">
+<h1>پایه هفتم</h1>
+ <h6> تعداد : {{ haftom_count }}</h6>
+ <table style="border-collapse: collapse; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Phone</th>
+    </tr>
+    {% for student in haftom %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+
+
+<div class="table-container">
+    <h1>پایه هشتم</h1>
+    <h6> تعداد : {{ hashtom_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Phone</th>
+    </tr>
+    {% for student in hashtom %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>پایه نهم</h1>
+    <h6> تعداد : {{ nohem_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Phone</th>
+    </tr>
+    {% for student in nohom %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+ {% endblock %}
