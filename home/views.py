@@ -41,6 +41,19 @@ def grade(request):
                                           'nohom':nohom, 'nohem_count':nohem_count,})
 
 
+def school(request):
+
+    all = Paziresh.objects.all().count()
+    a_count = Paziresh.objects.all().filter(school_name='اندیشه‌ صفا').count()
+    b_count = Paziresh.objects.all().filter(school_name='ارشاد').count()
+    c_count = Paziresh.objects.all().filter(school_name='چیتچیان').count()
+
+    z_count = Paziresh.objects.all().filter(school_name='متفرقه').count()
+
+    return render(request, 'school.html', {'count':all, '1_count':a_count, '2_count':b_count,
+                                           '3_count':c_count, 'z_count':z_count,})
+
+
 def create(request):
     if request.method == 'POST':
         form = CreateForm(request.POST)

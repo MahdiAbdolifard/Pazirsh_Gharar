@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
  {% block c %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پذیرش</title>
 <style>
+@font-face {
+  font-family: aa;
+  src: url(fonts/maneli.ttf) format('ttf');
+}
+
 
 body {
     direction: rtl;
@@ -22,15 +28,17 @@ body {
 }
 
 h3 {
+  font-family: anjoman;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  font-family: anjoman;
+  display:flex;
+  flex-direction:column;
   align-items:baseline;
-  justify-content:center;
+  justify-content:end;
   background-color: #f2f2f2;
   padding: 22px;
   border-radius: 30px;
@@ -38,8 +46,10 @@ form {
 }
 
 label {
+  font-family:anjoman;
   font-weight:normal;
   margin-bottom: 5px;
+  margin-inline-end:10px;
 }
 
 input {
@@ -48,7 +58,7 @@ input {
   border-radius: 10px;
   margin-bottom: 5px;
   width: 400px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 button[type="submit"] {
@@ -83,7 +93,7 @@ select:focus {
      <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" value="ارسال">ارسال</button>
+        <button type="submit" value="ارسال">send</button>
     </form>
 </div>
  {% endblock %}
