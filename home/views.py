@@ -8,7 +8,7 @@ from .send import send
 
 
 
-def test(request):
+def all(request):
     all = Paziresh.objects.all()
     all_count = Paziresh.objects.all().count()
     return render(request, 'hello.html', {'all_student':all, 'count':all_count})
@@ -71,3 +71,7 @@ def create(request):
     else:
         form = CreateForm()
     return render(request, 'create.html', {'form':form})
+
+
+def test(request):
+    return render(request, 'test.html')
