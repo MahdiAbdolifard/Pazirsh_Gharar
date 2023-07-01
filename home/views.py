@@ -15,14 +15,63 @@ def all(request):
 
 
 def group(request):
+
     malek = Paziresh.objects.all().filter(group_name='مالک اشتر')
     malek_count = Paziresh.objects.all().filter(group_name='مالک اشتر').count()
 
     amar = Paziresh.objects.all().filter(group_name='عمار')
     amar_count = Paziresh.objects.all().filter(group_name='عمار').count()
 
+    salman = Paziresh.objects.all().filter(group_name='سلمان')
+    salman_count = Paziresh.objects.all().filter(group_name='سلمان').count()
+
+    abotaleb = Paziresh.objects.all().filter(group_name='ابوطالب')
+    abotaleb_count = Paziresh.objects.all().filter(group_name='ابوطالب').count()
+
+    jaber = Paziresh.objects.all().filter(group_name='جابر')
+    jaber_count = Paziresh.objects.all().filter(group_name='جابر').count()
+
+    komal = Paziresh.objects.all().filter(group_name='کمیل')
+    komal_count = Paziresh.objects.all().filter(group_name='کمیل').count()
+
+    habib = Paziresh.objects.all().filter(group_name='حبیب')
+    habib_count = Paziresh.objects.all().filter(group_name='حبیب').count()
+
+    hamze = Paziresh.objects.all().filter(group_name='حمزه')
+    hamze_count = Paziresh.objects.all().filter(group_name='حمزه').count()
+
+    hanif = Paziresh.objects.all().filter(group_name='حنیف')
+    hanif_count = Paziresh.objects.all().filter(group_name='حنیف').count()
+
+    meghdad = Paziresh.objects.all().filter(group_name='مقداد')
+    meghdad_count = Paziresh.objects.all().filter(group_name='مقداد').count()
+
+    moslem = Paziresh.objects.all().filter(group_name='مسلم')
+    moslem_count = Paziresh.objects.all().filter(group_name='مسلم').count()
+
+    ghais = Paziresh.objects.all().filter(group_name='قیس')
+    ghais_count = Paziresh.objects.all().filter(group_name='قیس').count()
+
+    ovas = Paziresh.objects.all().filter(group_name='اویس')
+    ovas_count = Paziresh.objects.all().filter(group_name='اویس').count()
+
+    abozar = Paziresh.objects.all().filter(group_name='ابوذر')
+    abozar_count = Paziresh.objects.all().filter(group_name='ابوذر').count()
+
     return render(request, 'group.html', {'malek':malek, 'malek_count':malek_count,
-                                          'amar':amar, 'amar_count':amar_count,})
+                                          'amar':amar, 'amar_count':amar_count,
+                                          'abotaleb':abotaleb, 'abotaleb_count':abotaleb_count,
+                                          'jaber':jaber, 'jaber_count':jaber_count,
+                                          'komal':komal, 'komal_count':komal_count,
+                                          'habib':habib, 'habib_count':habib_count,
+                                          'hamze':hamze, 'hamze_count':hamze_count,
+                                          'hanif':hanif, 'hanif_count':hanif_count,
+                                          'meghdad':meghdad, 'meghdad_count':meghdad_count,
+                                          'moslem':moslem, 'moslem_count':moslem_count,
+                                          'ghais':ghais, 'ghais_count':ghais_count,
+                                          'ovas':ovas, 'ovas_count':ovas_count,
+                                          'abozar':abozar, 'abozar_count':abozar_count,
+                                          'salman':salman, 'salman_count':salman_count,})
 
 
 

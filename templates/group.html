@@ -2,6 +2,7 @@
  {% block c %}
  <title>اسامی گروه ها</title>
 
+
  <style>
     body {
         direction: rtl;
@@ -9,12 +10,14 @@
     }
         body, td, th {
             font-family: Calibre, sans-serif;
+            font-family: Calibre, sans-serif;
             }
             *:lang(fa) {
-                font-family: Btitr, sans-serif;
+                font-family: Calibre, sans-serif;
             }
 
 .table-container {
+    font-family: Calibre, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,13 +25,15 @@
 }
 
 .table-container table {
+    font-family: Calibre, sans-serif;
     margin: 0 auto;
-    width: 30%;
+    width: 650px;
     border-collapse: collapse;
     background-color: #f2f2f2;
 }
 
 .table-container h1 {
+    font-family: Calibre, sans-serif;
     margin-top: 50px;
     margin-bottom: 0;
     font-weight: bold;
@@ -37,13 +42,15 @@
 }
 
 .table-container h6 {
+    font-family: Calibre, sans-serif;
     margin-top: 0;
-    margin-right: -520px;
+    margin-right: -607px;
     font-size: 12px;
     text-align:right;
 }
 
     </style>
+
 
 <div class="table-container">
 <h1>گروه مالک اشتر</h1>
@@ -93,8 +100,278 @@
 </table>
 
 
+<div class="table-container">
+    <h1>گروه سلمان</h1>
+    <h6> تعداد : {{ salman_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in salman %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
 
 
+<div class="table-container">
+    <h1>گروه ابوطالب</h1>
+    <h6> تعداد : {{ abotaleb_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in abotaleb %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه جابر</h1>
+    <h6> تعداد : {{ jaber_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in jaber %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="table-container">
+    <h1>گروه کمیل</h1>
+    <h6> تعداد : {{ komal_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in komal %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه حبیب</h1>
+    <h6> تعداد : {{ habib_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in habib %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه حمزه</h1>
+    <h6> تعداد : {{ hamze_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in hamze %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه حنیف</h1>
+    <h6> تعداد : {{ hanif_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in hanif %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="table-container">
+    <h1>گروه مقداد</h1>
+    <h6> تعداد : {{ meghdad_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in meghdad %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه مسلم</h1>
+    <h6> تعداد : {{ moslem_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in moslem %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه قیس</h1>
+    <h6> تعداد : {{ ghais_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in ghais %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه اویس</h1>
+    <h6> تعداد : {{ ovas_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in ovas %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="table-container">
+    <h1>گروه ابوذر</h1>
+    <h6> تعداد : {{ abozar_count }}</h6>
+ <table style="border-collapse: collapse ; background-color: #f2f2f2;">
+    <tr style="background-color: #ddd;">
+        <th style="border: 1px solid #ddd; padding: 8px;">First Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Last Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">School Name</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Grade</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Family Phone</th>
+    </tr>
+    {% for student in abozar %}
+    <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.fname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.lname }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.school_name }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.grade }}</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">{{ student.parent_phone }}</td>
+    </tr>
+    {% endfor %}
+</table>
 
 
  {% endblock %}
