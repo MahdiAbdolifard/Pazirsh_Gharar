@@ -11,7 +11,9 @@ class CreateForm(forms.Form):
 
 
     school_choices = [("اندیشه‌ صفا", "اندیشه‌ صفا"), ("چیتچیان", "چیتچیان"),
-                      ("ارشاد", "ارشاد"), ("متفرقه", "متفرقه")]
+                      ("ارشاد", "ارشاد"),
+                      ("امام عصر", "امام عصر"),
+                      ("متفرقه", "متفرقه")]
     school_name = forms.ChoiceField(label='مدرسه', choices=school_choices, required=True)
     custom_school_name = forms.CharField(label='', required=False, 
                                          widget=forms.TextInput(attrs={'placeholder':'09123456789' }))
@@ -80,7 +82,7 @@ class CreateForm(forms.Form):
 
         if group_name == group_name:
             amar_count = Paziresh.objects.filter(group_name=group_name).count()
-            if amar_count >= 5:
+            if amar_count >= 27:
                 raise forms.ValidationError(f"ظرفیت گروه {group_name} پر شده است.")
 
         return group_name

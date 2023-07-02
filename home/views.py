@@ -96,10 +96,11 @@ def school(request):
     a_count = Paziresh.objects.all().filter(school_name='اندیشه‌ صفا').count()
     b_count = Paziresh.objects.all().filter(school_name='ارشاد').count()
     c_count = Paziresh.objects.all().filter(school_name='چیتچیان').count()
-
-    z_count = Paziresh.objects.all().filter(school_name='متفرقه').count()
+    d_count = Paziresh.objects.all().filter(school_name="امام عصر").count()
+    z_count = all - (a_count + b_count + c_count + d_count)
 
     return render(request, 'school.html', {'count':all, '1_count':a_count, '2_count':b_count,
+                                           '4_count':d_count, 
                                            '3_count':c_count, 'z_count':z_count,})
 
 
@@ -113,14 +114,14 @@ def create(request):
                                     phone=cd['phone'], grade=cd['grade'], created_bey=cd['created_by'],
                                     parent_phone=cd['parent_phone'], group_name=cd['group_name'])
             messages.success(request, 'دانش‌آموز با موفقیت ثبت شد', 'success')
-       
+            # send(cd['phone']) 
             # test_send(cd['phone'])
 # -------------------------------------------------------------
             # send(request ,cd['phone'])
             # send(request, cd['parent_phone'])
 # -------------------------------------------------------------
-            send_child(cd['phone'], cd['fname'])
-            send_parent(cd['parent_phone'], cd['lname'])
+            # send_child(cd['phone'], cd['fname'])
+            # send_parent(cd['parent_phone'], cd['lname'])
 
             time.sleep(3)
             messages.success(request, 'پیام‌‌ها با موفقیت ارسال شد', 'primary')
