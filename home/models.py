@@ -10,4 +10,5 @@ class Paziresh(models.Model):
     parent_phone = models.CharField(max_length=20)
     group_name = models.CharField(max_length=50)
     created_bey = models.CharField(max_length=50)
+    GPA = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now=True)

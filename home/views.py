@@ -112,7 +112,7 @@ def create(request):
             cd = form.cleaned_data
             Paziresh.objects.create(fname=cd['fname'], lname=cd['lname'], school_name=cd['school_name'], 
                                     phone=cd['phone'], grade=cd['grade'], created_bey=cd['created_by'],
-                                    parent_phone=cd['parent_phone'], group_name=cd['group_name'])
+                                    parent_phone=cd['parent_phone'], group_name=cd['group_name'], GPA=cd['GPA'])
             messages.success(request, 'دانش‌آموز با موفقیت ثبت شد', 'success')
             # send(cd['phone']) 
             # test_send(cd['phone'])
@@ -123,8 +123,8 @@ def create(request):
             # send_child(cd['phone'], cd['fname'])
             # send_parent(cd['parent_phone'], cd['lname'])
 
-            time.sleep(3)
-            messages.success(request, 'پیام‌‌ها با موفقیت ارسال شد', 'primary')
+            # time.sleep(3)
+            # messages.success(request, 'پیام‌‌ها با موفقیت ارسال شد', 'primary')
             time.sleep(1)
             return redirect('allstudent')
             

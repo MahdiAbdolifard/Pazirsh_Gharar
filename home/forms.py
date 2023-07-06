@@ -14,9 +14,13 @@ class CreateForm(forms.Form):
                       ("ارشاد", "ارشاد"),
                       ("امام عصر", "امام عصر"),
                       ("متفرقه", "متفرقه")]
+    
+    GPA = forms.CharField(label='معدل', max_length=10, widget=forms.TextInput(attrs={'placeholder':'20'}))
     school_name = forms.ChoiceField(label='مدرسه', choices=school_choices, required=True)
     custom_school_name = forms.CharField(label='', required=False, 
                                          widget=forms.TextInput(attrs={'placeholder':'09123456789' }))
+    
+    
 
     def clean(self):
         cleaned_data = super().clean()
@@ -46,7 +50,7 @@ class CreateForm(forms.Form):
                              widget=forms.TextInput(attrs={'placeholder':'09123456789' }))
     
 
-    parent_phone = forms.CharField(label='شماره تلفن اولیا',required=True, max_length=11, min_length=11,
+    parent_phone = forms.CharField(label='شماره تلفن اولیا',required=False, max_length=11, min_length=11,
                              widget=forms.TextInput(attrs={'placeholder':'09123456789' }))
 
 
