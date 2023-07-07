@@ -112,7 +112,7 @@ def create(request):
             cd = form.cleaned_data
             Paziresh.objects.create(fname=cd['fname'], lname=cd['lname'], school_name=cd['school_name'], 
                                     phone=cd['phone'], grade=cd['grade'], created_bey=cd['created_by'],
-                                    parent_phone=cd['parent_phone'], group_name=cd['group_name'], GPA=cd['GPA'], pool=cd['pool'])
+                                    parent_phone=cd['parent_phone'], group_name=cd['group_name'], GPA=cd['GPA'], mahale=cd['mahale'])
             messages.success(request, 'دانش‌آموز با موفقیت ثبت شد', 'success')
             # send(cd['phone']) 
             # test_send(cd['phone'])

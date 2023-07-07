@@ -12,4 +12,5 @@ class Paziresh(models.Model):
     created_bey = models.CharField(max_length=50)
     GPA = models.CharField(max_length=10)
     pool = models.CharField(max_length=10)
+    mahale = models.CharField(max_length=10)
     created = models.DateTimeField(auto_now=True)
